@@ -44,7 +44,7 @@ module Kafka
         notification[:message_count] = message_count
 
         begin
-          send_buffered_messages
+          # send_buffered_messages
         ensure
           notification[:sent_message_count] = message_count - @buffer.size
         end
